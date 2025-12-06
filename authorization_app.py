@@ -9,7 +9,6 @@
 import tkinter as tk
 from tkinter import messagebox
 from datetime import datetime
-import threading
 
 
 class AuthorizationApp:
@@ -218,9 +217,14 @@ class AuthorizationApp:
         
         if not machine_code:
             return ""
+        
+        # 验证机器码格式（仅包含字母数字）
+        if not machine_code.isalnum():
+            return "ERROR-INVALID-FORMAT"
             
         # 临时示例：简单处理（实际使用时需替换）
         # 这里只是一个占位符，展示返回格式
+        # 实际算法应根据具体的计算规律实现
         example_auth_code = f"AUTH-{machine_code}-DEMO"
         
         return example_auth_code

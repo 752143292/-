@@ -1,0 +1,8 @@
+# Python 依赖包列表
+# 用于授权码生成器应用程序
+
+# PyInstaller - 用于将Python程序打包成exe
+pyinstaller>=5.0
+
+# tkinter通常随Python自带，无需单独安装
+# 如果遇到问题，可能需要安装python-tk包（通过系统包管理器）

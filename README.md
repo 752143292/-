@@ -2,77 +2,90 @@
 
 消防调试类授权码生成工具
 
-## 📥 如何获取程序 / How to Get the Program
+**🎯 现提供两个版本 / Two Versions Available:**
+- 🔷 **C# 版本** - Windows Forms (仅 Windows)
+- 🐍 **Python 版本** - tkinter (跨平台：Windows/Linux/macOS)
 
-### 方法1：一键编译（最快）/ Method 1: One-Command Build (Fastest)
+---
+
+## 🐍 Python 版本（推荐 / Recommended）
+
+### 快速开始 / Quick Start
 
 ```bash
-# 需要安装 .NET 8.0 SDK
-# Requires .NET 8.0 SDK
+# 1. 安装依赖 / Install dependencies
+pip install -r requirements.txt
+
+# 2. 运行程序 / Run program
+python license_generator.py
+```
+
+### 特点 / Features
+- ✅ **跨平台** - Windows / Linux / macOS
+- ✅ **轻量级** - 源代码仅约 9KB
+- ✅ **易修改** - Python 代码简单清晰
+- ✅ **快速启动** - 无需编译，直接运行
+
+📖 **详细教程** / Detailed Guide: [Python使用指南.md](Python使用指南.md)
+
+---
+
+## 🔷 C# 版本（Windows 专用）
+
+### 快速开始 / Quick Start
+
+```bash
+# 编译运行 / Build and run
+dotnet run
+
+# 或打包为 EXE / Or package as EXE
 dotnet publish LicenseGenerator.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o ./output
 ```
 
-编译完成后运行：`output/LicenseGenerator.exe`  
-After building, run: `output/LicenseGenerator.exe`
-
-### 方法2：复制源代码直接运行 / Method 2: Copy Source Code and Run
-
-1. 复制以下3个文件：  
-   Copy these 3 files:
-   - `Program.cs`
-   - `MainForm.cs`
-   - `LicenseGenerator.csproj`
-
-2. 在文件夹中运行：  
-   Run in the folder:
-   ```bash
-   dotnet run
-   ```
+### 特点 / Features
+- ✅ **原生 Windows** - Windows Forms 界面
+- ✅ **自包含** - 无需安装 .NET
+- ✅ **单文件** - 打包为单个 EXE
 
 📖 **详细教程** / Detailed Guide: [下载和运行指南.md](下载和运行指南.md)
 
-## 💻 源代码 / Source Code
+---
 
-所有源代码可直接查看和复制（仅3个文件，共约11KB）：  
-All source code is available for viewing and copying (only 3 files, ~11KB total):
+## 📁 文件结构 / File Structure
 
+### Python 版本 / Python Version
+| 文件 / File | 说明 / Description | 大小 / Size |
+|------------|-------------------|------------|
+| `license_generator.py` | Python 主程序（完整实现）| ~9 KB |
+| `requirements.txt` | Python 依赖包列表 | ~0.1 KB |
+
+### C# 版本 / C# Version
 | 文件 / File | 说明 / Description | 大小 / Size |
 |------------|-------------------|------------|
 | `Program.cs` | 程序入口 / Entry point | ~0.5 KB |
 | `MainForm.cs` | 主窗体和所有逻辑 / Main form & logic | ~10 KB |
 | `LicenseGenerator.csproj` | 项目配置 / Project config | ~0.4 KB |
 
-**特点 / Features:**
-- ✅ 代码简洁清晰，易于理解
-- ✅ 中英文双语注释
-- ✅ 无外部依赖，只需 .NET 8.0
+---
 
-## 📚 文档 / Documentation
+## 📚 完整文档 / Complete Documentation
 
 | 文档 | 说明 |
 |------|------|
-| 📥 [下载和运行指南.md](下载和运行指南.md) | **如何获取和运行程序** |
-| 📖 [使用说明.md](使用说明.md) | 详细使用指南 |
+| 🐍 [Python使用指南.md](Python使用指南.md) | **Python 版本使用指南** |
+| 📥 [下载和运行指南.md](下载和运行指南.md) | C# 版本使用指南 |
+| 📖 [使用说明.md](使用说明.md) | 通用使用说明 |
 | 📋 [功能说明.md](功能说明.md) | 功能详细说明 |
 | ✅ [测试用例.md](测试用例.md) | 测试清单 |
 | 🔧 [算法实现指南.md](算法实现指南.md) | 如何添加实际算法 |
 | 📦 [项目交付说明.md](项目交付说明.md) | 项目总览 |
 | 🖼️ [界面预览.md](界面预览.md) | 界面展示 |
 
-## ⚡ 快速开始 / Quick Start
-
-1. **克隆仓库** / Clone repository
-   ```bash
-   git clone [仓库地址]
-   cd [仓库目录]
-   ```
-
-2. **编译运行** / Build and run
-   ```bash
-   dotnet run
-   ```
+---
 
 ## 🎯 功能特性 / Features
+
+两个版本功能完全相同：
 
 - ✅ 输入12位机器码（自动转大写）
 - ✅ 生成授权码
@@ -81,21 +94,47 @@ All source code is available for viewing and copying (only 3 files, ~11KB total)
 - ✅ 友好的错误提示
 - ✅ 简洁的界面设计
 
-## 💡 系统要求 / System Requirements
+---
 
-**开发/编译 / Development:**
-- .NET 8.0 SDK
-- Windows、Linux 或 macOS
+## 💡 版本选择建议 / Version Selection Guide
 
-**运行 / Runtime:**
-- Windows 7 或更高版本
-- 64位系统
-- 编译后的程序自包含，无需安装 .NET
+### 选择 Python 版本，如果你 / Choose Python if:
+- ✅ 需要跨平台运行 (Windows/Linux/macOS)
+- ✅ 想要轻量级解决方案
+- ✅ 熟悉 Python 或想快速修改代码
+- ✅ 希望快速部署和分发
+
+### 选择 C# 版本，如果你 / Choose C# if:
+- ✅ 只在 Windows 上运行
+- ✅ 喜欢原生 Windows 界面风格
+- ✅ 熟悉 C# 和 .NET 生态
+- ✅ 需要更好的 Windows 集成
+
+---
 
 ## ⚠️ 注意事项 / Notes
 
-当前版本使用临时授权码算法（`TEMP-` + 前8位机器码）  
-实际算法待实现，详见 [算法实现指南.md](算法实现指南.md)
+**当前版本使用临时授权码算法**  
+Current version uses temporary algorithm
 
-Current version uses temporary algorithm (`TEMP-` + first 8 chars)  
+- 输入：`ABC123DEF456`
+- 输出：`TEMP-ABC123DE`
+
+实际算法待实现，详见 [算法实现指南.md](算法实现指南.md)  
 Actual algorithm to be implemented, see [算法实现指南.md](算法实现指南.md)
+
+---
+
+## 📊 版本对比 / Version Comparison
+
+| 特性 | Python 版本 | C# 版本 |
+|------|------------|---------|
+| 平台支持 | Windows/Linux/macOS | 仅 Windows |
+| 源代码大小 | ~9 KB (1个文件) | ~11 KB (3个文件) |
+| 打包后大小 | ~15-30 MB | ~147 MB |
+| 运行要求 | Python 3.7+ | 无（自包含） |
+| 启动速度 | 快 | 非常快 |
+| UI 框架 | tkinter | Windows Forms |
+| 开发语言 | Python | C# |
+| 易修改性 | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+| 跨平台 | ✅ | ❌ |

@@ -1,0 +1,5 @@
+# Python 依赖包 / Python Dependencies
+# 李向前FIRE - 授权码生成器
+
+# 剪贴板操作库 / Clipboard operations library
+pyperclip>=1.8.2

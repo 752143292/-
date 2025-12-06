@@ -8,10 +8,36 @@
 
 ---
 
+## ⚡ 一键启动 / One-Click Start
+
+**最简单的运行方式 (推荐):**
+
+| 操作系统 | 启动方式 |
+|---------|---------|
+| **Windows** | 双击 `start.bat` |
+| **Linux/macOS** | 运行 `./start.sh` |
+| **通用** | `python start.py` |
+
+这些启动脚本会自动检查并安装所需依赖！  
+These startup scripts will automatically check and install required dependencies!
+
+❓ **遇到问题？** 查看 [故障排除指南.md](故障排除指南.md)
+
+---
+
 ## 🐍 Python 版本（推荐 / Recommended）
 
 ### 快速开始 / Quick Start
 
+**方法1: 使用启动脚本（推荐）**
+```bash
+# Windows: 双击 start.bat
+# Linux/macOS: ./start.sh
+# 或通用方式:
+python start.py
+```
+
+**方法2: 手动运行**
 ```bash
 # 1. 安装依赖 / Install dependencies
 pip install -r requirements.txt

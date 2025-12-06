@@ -2,12 +2,17 @@
 
 ## Repository Overview
 
-This repository is focused on fire protection debugging and testing (消防调试类). It serves as a collection or framework for fire protection system debugging utilities and classes.
+This repository is focused on fire protection debugging and testing (消防调试类). It is designed to serve as a collection or framework for fire protection system debugging utilities and related tools.
 
 ## Project Structure
 
+Currently a minimal repository structure. Expected structure as the project grows:
+
 - **README.md**: Main repository documentation in Chinese
 - **.github/**: GitHub configuration and Copilot instructions
+- Future: Source code directories for fire protection debugging tools
+- Future: Test directories for validating functionality
+- Future: Documentation directory for detailed guides and specifications
 
 ## Development Guidelines
 

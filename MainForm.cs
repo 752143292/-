@@ -210,6 +210,12 @@ namespace LicenseGenerator
             // TODO: 在这里实现具体的授权码计算逻辑
             // TODO: Implement specific authorization code calculation logic here
             
+            // 验证输入 / Validate input
+            if (string.IsNullOrEmpty(machineCode) || machineCode.Length < 8)
+            {
+                return "ERROR-INVALID";
+            }
+            
             // 目前返回一个占位符，等待后续添加实际计算规律
             // Currently returns a placeholder, waiting for actual calculation pattern to be added
             
